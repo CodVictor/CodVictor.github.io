@@ -3,81 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Victor Hugo | Frontend Developer Portfolio</title>
+    <title>Victor Hugo</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-[#0a0a0a] text-white font-['Inter'] selection:bg-purple-500/30">
+<body class="bg-[#050505] text-white selection:bg-cyan-500/30 overflow-x-hidden">
 
-    <nav class="fixed w-full z-50 backdrop-blur-md border-b border-white/10 bg-black/20">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <span class="text-xl font-bold tracking-tighter">VH</span>
-            <div class="space-x-8 text-sm uppercase tracking-widest hidden md:block">
-                <a href="#home" class="hover:text-purple-400 transition-colors">Inicio</a>
-                <a href="#projects" class="hover:text-purple-400 transition-colors">Proyectos</a>
-                <a href="#contact" class="hover:text-purple-400 transition-colors">Contacto</a>
+    <div id="custom-cursor" class="hidden lg:block"></div>
+
+    <div class="fixed inset-0 -z-10 overflow-hidden">
+        <div id="glow-blob" class="absolute w-[600px] h-[600px] bg-cyan-600/10 rounded-full blur-[120px] transition-all duration-700"></div>
+        <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 brightness-50 contrast-150"></div>
+    </div>
+
+    <nav class="fixed w-full z-50 top-0 border-b border-white/5 backdrop-blur-xl bg-black/40">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="#home" class="nav-logo group">
+                <img src="assets/signature.png" 
+                    alt="Victor Hugo" 
+                    class="h-16 md:h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+            </a>
+            <div class="hidden md:flex gap-8 font-mono text-xs tracking-tighter uppercase">
+                <a href="#projects" class="hover:text-cyan-400 transition-colors">/proyectos</a>
+                <a href="https://github.com/CodVictor" target="_blank" class="hover:text-cyan-400 transition-colors">/github</a>
+                <a href="#contact" class="hover:text-cyan-400 transition-colors">/contacto</a>
             </div>
         </div>
     </nav>
 
-    <section id="home" class="min-h-screen flex flex-col justify-center items-center px-6 relative overflow-hidden">
-        <div class="absolute w-[500px] h-[500px] bg-purple-600/20 rounded-full blur-[120px] -top-20 -left-20"></div>
-        <div class="absolute w-[400px] h-[400px] bg-blue-600/10 rounded-full blur-[100px] bottom-0 right-0"></div>
+    <main id="home" class="relative min-h-screen flex flex-col justify-center px-6 md:px-20 lg:px-40">
+        <div class="max-w-4xl space-y-6">
+            <h2 class="font-mono text-cyan-500 text-sm md:text-base mb-2 animate-pulse">
+                &gt; sudo init Victor_Hugo_Portfolio...
+            </h2>
+            <h1 class="text-6xl md:text-9xl font-bold tracking-tighter leading-none font-['Space_Grotesk']">
+                CREANDO EL <br> <span class="text-outline">FUTURO</span> DIGITAL.
+            </h1>
+            <p class="text-gray-400 text-lg md:text-xl max-w-xl font-light leading-relaxed">
+                Ingeniero del Software
+            </p>
+        </div>
+    </main>
+
+    <section id="projects" class="py-32 px-6 md:px-20">
+        <h3 class="font-mono text-xs uppercase tracking-[0.3em] mb-12 text-gray-500">// Obra Maestra</h3>
         
-        <h1 class="text-6xl md:text-8xl font-extrabold mb-4 text-center tracking-tight" data-aos="fade-up">
-            Victor Hugo
-        </h1>
-        <p class="text-gray-400 text-lg md:text-xl max-w-2xl text-center mb-8" data-aos="fade-up" data-aos-delay="200">
-            Desarrollador Frontend especializado en crear experiencias digitales minimalistas y de alto impacto.
-        </p>
-        <a href="#projects" class="px-8 py-3 bg-white text-black font-semibold rounded-full hover:bg-purple-500 hover:text-white transition-all duration-300" data-aos="fade-up" data-aos-delay="400">
-            Ver Proyectos
-        </a>
+        <div class="stilnovo-card group relative rounded-3xl overflow-hidden border border-white/10 bg-white/[0.02] backdrop-blur-3xl">
+            <div class="grid lg:grid-cols-2">
+                <div class="p-10 md:p-20 flex flex-col justify-center order-2 lg:order-1">
+                    <h4 class="text-5xl md:text-7xl font-bold mb-6 italic">Stilnovo</h4>
+                    <p class="text-gray-400 text-lg mb-8 leading-relaxed">
+                        Mi proyecto más ambicioso. Una plataforma de compra venta que desafía los límites de la interacción convencional, centrada en la armonía visual y el rendimiento técnico extremo.
+                    </p>
+                    <div class="flex flex-wrap gap-3 mb-10">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">API REST</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">Spring MVC</span>
+                    </div>
+                </div>
+                <div class="relative bg-gradient-to-tr from-cyan-950 to-black h-[400px] lg:h-auto order-1 lg:order-2 flex items-center justify-center border-l border-white/5 overflow-hidden group">
+            
+                    <span class="absolute text-white/5 font-black text-9xl select-none z-0 pointer-events-none">STIL</span>
+
+                    <img src="assets/stilnovo.png" 
+                        alt="Stilnovo Showcase" 
+                        class="relative z-10 w-full h-full object-cover opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700 ease-in-out">
+
+                    <div class="absolute inset-0 bg-gradient-to-r from-[#020308] via-transparent to-transparent z-20 pointer-events-none"></div>
+            </div>
+            </div>
+        </div>
+
+        <div class="mt-32">
+            <h3 class="font-mono text-xs uppercase tracking-[0.3em] mb-12 text-gray-500">// Archivo de Código</h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <div class="project-grid-card group" data-tilt>
+                    <div class="card-inner">
+                        <div class="flex justify-between items-start mb-12">
+                            <div class="p-3 bg-white/5 rounded-xl border border-white/10 group-hover:border-cyan-500/50 transition-colors">
+                                <svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                            </div>
+                            <a href="https://github.com/CodVictor/Levelest" target="_blank" class="text-white/30 hover:text-white"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.841 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+                        </div>
+                        <h5 class="text-xl font-bold mb-3">Levelest</h5>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6">Plataforma de aprendizaje online, centrada a alumnos pre-selectividad.</p>
+                        <div class="font-mono text-[10px] text-white/40 uppercase">Node JS, API</div>
+                    </div>
+                </div>
+
+                <div class="project-grid-card group" data-tilt>
+                    <div class="card-inner">
+                        <div class="flex justify-between items-start mb-12">
+                            <div class="p-3 bg-white/5 rounded-xl border border-white/10 group-hover:border-purple-500/50 transition-colors">
+                                <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                            </div>
+                            <a href="https://github.com/CodVictor/Game-ShadowClash" target="_blank" class="text-white/30 hover:text-white"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.841 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+                        </div>
+                        <h5 class="text-xl font-bold mb-3">Shadow Clash</h5>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6">Experiencia de juego web con mecánicas de combate.</p>
+                        <div class="font-mono text-[10px] text-white/40 uppercase">Game Dev / POO</div>
+                    </div>
+                </div>
+
+                <div class="project-grid-card group" data-tilt>
+                    <div class="card-inner">
+                        <div class="flex justify-between items-start mb-12">
+                            <div class="p-3 bg-white/5 rounded-xl border border-white/10 group-hover:border-orange-500/50 transition-colors">
+                                <svg class="w-6 h-6 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 002-2h-2a2 2 0 002 2"/></svg>
+                            </div>
+                            <a href="https://github.com/CodVictor/AutoBurgerKiosk" target="_blank" class="text-white/30 hover:text-white"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.841 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+                        </div>
+                        <h5 class="text-xl font-bold mb-3">AutoBurger Kiosk</h5>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6">Sistema táctil para auto-pedido en restaurantes, enfocado en fluidez UX.</p>
+                        <div class="font-mono text-[10px] text-white/40 uppercase">UI / Automation / POO</div>
+                    </div>
+                </div>
+
+                <div class="project-grid-card group lg:col-span-1" data-tilt>
+                    <div class="card-inner">
+                        <div class="flex justify-between items-start mb-12">
+                            <div class="p-3 bg-white/5 rounded-xl border border-white/10 group-hover:border-pink-500/50 transition-colors">
+                                <svg class="w-6 h-6 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            </div>
+                            <a href="https://github.com/CodVictor/ArtGallery" target="_blank" class="text-white/30 hover:text-white"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.841 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+                        </div>
+                        <h5 class="text-xl font-bold mb-3">Art Gallery</h5>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6">Mi primera incursión web: una galería digital minimalista para artistas.</p>
+                        <div class="font-mono text-[10px] text-white/40 uppercase">Origins / First Web / Node JS</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </section>
 
-    <section id="projects" class="py-24 px-6 max-w-7xl mx-auto">
-        <h2 class="text-3xl font-bold mb-16 border-l-4 border-purple-500 pl-4" data-aos="fade-right">Proyecto Destacado</h2>
-        
-        <div class="glass-card rounded-3xl overflow-hidden grid md:grid-cols-2 gap-8 items-center" data-aos="zoom-in">
-            <div class="p-8 md:p-12">
-                <span class="text-purple-400 text-sm font-bold uppercase tracking-widest">Masterpiece</span>
-                <h3 class="text-4xl font-bold mt-2 mb-4">Stilnovo</h3>
-                <p class="text-gray-400 leading-relaxed mb-6">
-                    El proyecto más importante de mi carrera. Una plataforma de diseño vanguardista que redefine la interacción del usuario con interfaces de lujo. Rendimiento optimizado y estética impecable.
-                </p>
-                <div class="flex gap-4">
-                    <span class="px-3 py-1 bg-white/5 rounded-md text-xs border border-white/10">Next.js</span>
-                    <span class="px-3 py-1 bg-white/5 rounded-md text-xs border border-white/10">GSAP</span>
-                    <span class="px-3 py-1 bg-white/5 rounded-md text-xs border border-white/10">Tailwind</span>
-                </div>
-            </div>
-            <div class="h-64 md:h-full bg-gradient-to-br from-purple-900/40 to-black flex items-center justify-center p-12">
-                <div class="w-full h-full border border-white/20 rounded-xl backdrop-blur-xl flex items-center justify-center italic text-white/20">
-                    [ Stilnovo Preview Image ]
-                </div>
-            </div>
+    <footer id="contact" class="py-20 border-t border-white/5 text-center">
+        <div class="mb-10">
+            <h2 class="text-3xl font-bold mb-4">¿Hablamos de código?</h2>
+            <a href="mailto:tuemail@ejemplo.com" class="text-cyan-400 font-mono underline decoration-cyan-400/30 hover:decoration-cyan-400 transition-all">vhop2004@gmail.com</a>
         </div>
-
-        <div class="mt-32 text-center" data-aos="fade-up">
-            <h3 class="text-2xl font-bold mb-8">Otros Proyectos</h3>
-            <p class="text-gray-400 mb-8">Explora mi ecosistema de código completo en GitHub.</p>
-            <a href="https://github.com/CodVictor" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 border border-white/20 rounded-xl hover:bg-white/5 transition-all">
-                Ir a mi GitHub 
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.841 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-            </a>
-        </div>
-    </section>
-
-    <footer class="py-12 border-t border-white/10 text-center">
-        <div class="mb-6 opacity-60 hover:opacity-100 transition-opacity">
-            <img src="assets/signature.png" alt="Victor Hugo Signature" class="mx-auto max-w-[150px] invert">
-        </div>
-        <p class="text-xs text-gray-500 uppercase tracking-widest">© 2026 Diseñado y desarrollado por Victor Hugo</p>
+        <img src="assets/signature.png" alt="Signature" class="mx-auto h-16 w-auto mb-8 grayscale hover:grayscale-0 transition-all duration-700">
+        <p class="font-mono text-[10px] text-gray-600 uppercase">Handcrafted by CodVictor © 2026</p>
     </footer>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

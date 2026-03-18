@@ -1,29 +1,90 @@
-/* Custom properties for Glassmorphism */
 :root {
-    --glass-bg: rgba(255, 255, 255, 0.03);
-    --glass-border: rgba(255, 255, 255, 0.1);
+    --primary: #06b6d4;
+    --bg-dark: #050505;
 }
 
-.glass-card {
-    background: var(--glass-bg);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid var(--glass-border);
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), border 0.3s ease;
-}
-
-.glass-card:hover {
-    transform: translateY(-8px);
-    border-color: rgba(168, 85, 247, 0.4); /* Purple glow on hover */
-}
-
-/* Custom selection color */
-::selection {
-    background: #a855f7;
-    color: white;
-}
-
-/* Custom cursor or smooth transitions could go here */
 body {
-    cursor: default;
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: var(--bg-dark);
+}
+
+/* Custom Cursor Styling */
+#custom-cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background-color: var(--primary);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: difference;
+    transition: transform 0.1s ease-out;
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+    background: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.text-outline {
+    -webkit-text-stroke: 1px rgba(255,255,255,0.3);
+    color: transparent;
+}
+
+.tech-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    padding: 4px 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+/* Project Cards Grid */
+.project-grid-card {
+    position: relative;
+    padding: 1px;
+    border-radius: 24px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), transparent);
+    transition: all 0.4s ease;
+}
+
+.card-inner {
+    background: #0a0a0a;
+    border-radius: 23px;
+    padding: 40px;
+    height: 100%;
+}
+
+.project-grid-card:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(135deg, var(--primary), transparent);
+}
+
+/* Smooth Scrolling Customization */
+html {
+    scroll-behavior: smooth;
+}
+/* Custom Signature/Logo Sizing & Interaction */
+.nav-logo img {
+    /* Use max-height to ensure it doesn't break the navbar layout on small screens */
+    max-height: 80px; 
+    width: auto;
+    filter: drop-shadow(0 0 10px rgba(6, 182, 212, 0.2)); /* Subtle cyan glow to match your theme */
+}
+
+/* Ensure the nav-logo doesn't lose quality on scale */
+.nav-logo img {
+    image-rendering: -webkit-optimize-contrast;
+    backface-visibility: hidden;
+}
+
+/* Glassmorphism adjustment for the Navbar to fit the larger logo */
+nav {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    transition: all 0.3s ease;
 }
