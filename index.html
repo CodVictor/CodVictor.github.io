@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victor Hugo | Frontend Developer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#0a0a0a] text-white font-['Inter'] selection:bg-purple-500/30">
+
+    <nav class="fixed w-full z-50 backdrop-blur-md border-b border-white/10 bg-black/20">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <span class="text-xl font-bold tracking-tighter">VH</span>
+            <div class="space-x-8 text-sm uppercase tracking-widest hidden md:block">
+                <a href="#home" class="hover:text-purple-400 transition-colors">Inicio</a>
+                <a href="#projects" class="hover:text-purple-400 transition-colors">Proyectos</a>
+                <a href="#contact" class="hover:text-purple-400 transition-colors">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="min-h-screen flex flex-col justify-center items-center px-6 relative overflow-hidden">
+        <div class="absolute w-[500px] h-[500px] bg-purple-600/20 rounded-full blur-[120px] -top-20 -left-20"></div>
+        <div class="absolute w-[400px] h-[400px] bg-blue-600/10 rounded-full blur-[100px] bottom-0 right-0"></div>
+        
+        <h1 class="text-6xl md:text-8xl font-extrabold mb-4 text-center tracking-tight" data-aos="fade-up">
+            Victor Hugo
+        </h1>
+        <p class="text-gray-400 text-lg md:text-xl max-w-2xl text-center mb-8" data-aos="fade-up" data-aos-delay="200">
+            Desarrollador Frontend especializado en crear experiencias digitales minimalistas y de alto impacto.
+        </p>
+        <a href="#projects" class="px-8 py-3 bg-white text-black font-semibold rounded-full hover:bg-purple-500 hover:text-white transition-all duration-300" data-aos="fade-up" data-aos-delay="400">
+            Ver Proyectos
+        </a>
+    </section>
+
+    <section id="projects" class="py-24 px-6 max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold mb-16 border-l-4 border-purple-500 pl-4" data-aos="fade-right">Proyecto Destacado</h2>
+        
+        <div class="glass-card rounded-3xl overflow-hidden grid md:grid-cols-2 gap-8 items-center" data-aos="zoom-in">
+            <div class="p-8 md:p-12">
+                <span class="text-purple-400 text-sm font-bold uppercase tracking-widest">Masterpiece</span>
+                <h3 class="text-4xl font-bold mt-2 mb-4">Stilnovo</h3>
+                <p class="text-gray-400 leading-relaxed mb-6">
+                    El proyecto más importante de mi carrera. Una plataforma de diseño vanguardista que redefine la interacción del usuario con interfaces de lujo. Rendimiento optimizado y estética impecable.
+                </p>
+                <div class="flex gap-4">
+                    <span class="px-3 py-1 bg-white/5 rounded-md text-xs border border-white/10">Next.js</span>
+                    <span class="px-3 py-1 bg-white/5 rounded-md text-xs border border-white/10">GSAP</span>
+                    <span class="px-3 py-1 bg-white/5 rounded-md text-xs border border-white/10">Tailwind</span>
+                </div>
+            </div>
+            <div class="h-64 md:h-full bg-gradient-to-br from-purple-900/40 to-black flex items-center justify-center p-12">
+                <div class="w-full h-full border border-white/20 rounded-xl backdrop-blur-xl flex items-center justify-center italic text-white/20">
+                    [ Stilnovo Preview Image ]
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-32 text-center" data-aos="fade-up">
+            <h3 class="text-2xl font-bold mb-8">Otros Proyectos</h3>
+            <p class="text-gray-400 mb-8">Explora mi ecosistema de código completo en GitHub.</p>
+            <a href="https://github.com/CodVictor" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 border border-white/20 rounded-xl hover:bg-white/5 transition-all">
+                Ir a mi GitHub 
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.841 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-white/10 text-center">
+        <div class="mb-6 opacity-60 hover:opacity-100 transition-opacity">
+            <img src="assets/signature.png" alt="Victor Hugo Signature" class="mx-auto max-w-[150px] invert">
+        </div>
+        <p class="text-xs text-gray-500 uppercase tracking-widest">© 2026 Diseñado y desarrollado por Victor Hugo</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
